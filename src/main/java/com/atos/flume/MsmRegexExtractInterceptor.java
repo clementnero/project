@@ -69,8 +69,8 @@ public class MsmRegexExtractInterceptor implements Interceptor {
                 ((Integer.parseInt(typeMatcher.group(1)))%2 == 0?"TypeA":"TypeB"):
                 "unknown";
 
-        logger.debug(String.format("MsmRegexExtractInterceptor typeid=%s",messageType));
-        headers.put("typeid",messageType);
+        logger.debug(String.format("MsmRegexExtractInterceptor type-id=%s",messageType));
+        headers.put("type-id",messageType);
 
         return event;
     }
